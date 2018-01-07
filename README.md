@@ -123,3 +123,31 @@ return {                                // tương đương   return {
   }                                     //               }
 }
 ```
+
+## Cập nhật một đối tượng bởi tên thuộc tính
+
+```js
+const state = {
+  iphones: {
+    iphone6: { price: 255  },
+    iphone7: { price: 489  },
+    iphone8: { price: 699  },
+    iphoneX: { price: 1139 },
+  }
+}
+
+// Thay đổi giá cho iphoneX,
+// khi tên mô-đen được lưu trong vào một biến
+const model = "iphoneX";
+return {
+  ...state,
+  iphones: {                                          // tương ứng  iphones: { 
+    ...state.iphones,                                 //              iphone6: { price: 255  }, 
+    [model]: {                                        //              iphone7: { price: 489  }, 
+      ...state.iphones[model],                        //              iphone8: { price: 699  }, 
+      price: state.iphones[model].price + 3           //              iphoneX: { price: 1142 }, 
+    }                                                 //            } 
+  } 
+}
+```
+
