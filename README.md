@@ -103,3 +103,23 @@ return {
   count: state.count - 1
 }
 ```
+
+## Cập nhật cho đối tượng nằm trong đối tượng khác
+
+```js
+const state = {
+  ipad: {
+    name: 'Ipad 2',
+    price: 300
+  }
+}
+
+// Thay đổi giá cho Ipad 2
+return {
+  ...state,
+  ipad: {
+    ...state.ipad,
+    price: state.ipad.price + 25
+  }
+}
+```
