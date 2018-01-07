@@ -30,6 +30,8 @@ Có vẻ lạ nhưng thực tế chúng ta sử dụng rất nhiều giá trị 
 
 Chúng ta không thể thay đổi ngay trên chuỗi '2 3 Dzo'. Để *familiarSlogan* có giá trị mới, ta sẽ phải tạo một chuỗi mới và gán lại vào biến.
 
+💡 Bạn có thể tưởng tượng biến 'familiarSlogan' như một chiếc hộp, ban đầu nó chứa đồ vật là '2 3 Dzo'. Đồ vật này là không thể thay đổi, ta bỏ nó đi & thay bằng một đồ vật khác.
+
 # Spread operator
 
 Ví dụ sau sẽ sử dụng **spread operator** đối với mảng và đối tượng. Bằng cách đặt dấu 3 chấm trước mỗi một mảng/đối tượng, ta sẽ lấy ra được thành phần con của mảng/đối tượng đó.
