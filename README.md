@@ -151,3 +151,13 @@ return {
 }
 ```
 
+## Thêm phần tử vào đầu của mảng
+
+```js
+const array = [1, 2, 3];
+const newItem = 0;
+return [
+  newItem,
+  ...array
+];
+```
