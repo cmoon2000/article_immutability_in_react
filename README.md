@@ -84,3 +84,22 @@ let olderLiz = {
   age: 33
 }
 ```
+
+# Cách thức cập nhật trạng thái
+
+Những ví dụ sau được viết dựa trên tình huống ta đang trở lại trạng thái từ Redux reducer. Trong đó state là tham số được truyền vào trong hàm **reducer**, sau đó trở lại bản cập nhật của trạng thái:
+
+## Cập nhật trên đối tượng
+
+```js
+const state = {
+  clicks: 0,
+  count: 0
+}
+
+return {
+  ...state,
+  clicks: state.clicks + 1,
+  count: state.count - 1
+}
+```
