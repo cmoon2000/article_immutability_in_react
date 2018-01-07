@@ -115,12 +115,12 @@ const state = {
 }
 
 // Thay đổi giá cho Ipad 2
-return {                                // tương đương   return {
-  ...state,                             //                 ipad: {
-  ipad: {                               //                   name: 'Ipad 2',
-    ...state.ipad,                      //                   price: 325
-    price: state.ipad.price + 25        //                 }
-  }                                     //               }
+return {                                
+  ...state,                             
+  ipad: {                           // tương đương  ipad: {
+    ...state.ipad,                  //                name: 'Ipad 2',
+    price: state.ipad.price + 25    //                price: 325
+  }                                 //              }
 }
 ```
 
@@ -141,12 +141,12 @@ const state = {
 const model = "iphoneX";
 return {
   ...state,
-  iphones: {                                          // tương ứng  iphones: { 
-    ...state.iphones,                                 //              iphone6: { price: 255  }, 
-    [model]: {                                        //              iphone7: { price: 489  }, 
-      ...state.iphones[model],                        //              iphone8: { price: 699  }, 
-      price: state.iphones[model].price + 3           //              iphoneX: { price: 1142 }, 
-    }                                                 //            } 
+  iphones: {                                    // tương đương  iphones: { 
+    ...state.iphones,                           //                iphone6: { price: 255  }, 
+    [model]: {                                  //                iphone7: { price: 489  }, 
+      ...state.iphones[model],                  //                iphone8: { price: 699  }, 
+      price: state.iphones[model].price + 3     //                iphoneX: { price: 1142 }, 
+    }                                           //              } 
   } 
 }
 ```
