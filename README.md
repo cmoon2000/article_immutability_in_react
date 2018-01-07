@@ -115,11 +115,11 @@ const state = {
 }
 
 // Thay đổi giá cho Ipad 2
-return {
-  ...state,
-  ipad: {
-    ...state.ipad,
-    price: state.ipad.price + 25
-  }
+return {                                // tương đương   return {
+  ...state,                             //                 ipad: {
+  ipad: {                               //                   name: 'Ipad 2',
+    ...state.ipad,                      //                   price: 325
+    price: state.ipad.price + 25        //                 }
+  }                                     //               }
 }
 ```
