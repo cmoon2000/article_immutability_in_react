@@ -28,7 +28,57 @@ Có vẻ lạ nhưng thực tế chúng ta sử dụng rất nhiều giá trị 
   '2 4 Nhau'
 ```
 
-Chúng ta không thể thay đổi ngay trên chuỗi '2 3 Dzo'. Để *familiarSlogan* có giá trị mới, ta chỉ còn cách tạo một chuỗi mới và gán vào biến.
+Chúng ta không thể thay đổi ngay trên chuỗi '2 3 Dzo'. Để *familiarSlogan* có giá trị mới, ta sẽ phải tạo một chuỗi mới và gán lại vào biến.
 
+# Spread operator
 
+Ví dụ sau sẽ sử dụng **spread operator** đối với mảng và đối tượng. Bằng cách đặt dấu 3 chấm trước mỗi một mảng/đối tượng, ta sẽ lấy ra được thành phần con của mảng/đối tượng đó.
 
+```js
+// Mảng:
+let nums = [1,2,3];
+let otherNums = [...nums];  // => [1,2,3]
+nums === otherNums // => false! nums và otherNums là 2 đối tượng phân biệt mặc dù chúng có các phần tử giống nhau
+
+// Đối tượng:
+let person = {
+  name: "Liz",
+  age: 32
+}
+let otherPerson = {...person};  // tạo ra một người khác có cùng đặc điểm
+person === otherPerson  // false! đây là 2 người khác nhau
+
+// 
+let company = {
+  name: "TNHH Foo",
+  people: [
+    {name: "Joe"},
+    {name: "Alice"}
+  ]
+}
+let newCompany = {...company};
+newCompany === company  // => false!
+newCompany.people === company.people  // => true!
+```
+
+Từ một mảng/đối tượng, **Spread operator** giúp ta tạo mới một mảng/đối tượng có cùng nội dung. Điểm hữu ích là ta có thể thay đổi các thuộc tính của bản sao khi cần:
+
+```js
+let liz = {
+  name: "Liz",
+  age: 32,
+  location: {
+    city: "Portland",
+    state: "Oregon"
+  },
+  pets: [
+    {type: "cat", name: "Redux"}
+  ]
+}
+
+// tăng tuổi Liz lên 1, trong khi các thuộc tính còn lại giữ nguyên:
+let olderLiz = {
+  ...liz,
+  age: 33
+}
+```
