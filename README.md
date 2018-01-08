@@ -1,4 +1,6 @@
-Thuật ngữ Immutability - tính không thay đổi là một khái niệm cần phải được hiểu khi sử dụng React. Có thể bạn đã biết rằng chúng ta không được [trực tiếp thay đổi trạng thái](https://reactjs.org/docs/state-and-lifecycle.html#do-not-modify-state-directly). 
+Immutable update in react and redux
+
+Thuật ngữ Immutability - tính không thay đổi là một khái niệm cần phải được hiểu khi sử dụng React. Có thể bạn đã biết rằng chúng ta không được [trực tiếp thay đổi trạng thái](https://reactjs.org/docs/state-and-lifecycle.html#do-not-modify-state-directly).
 
 > Vậy làm sao để thay đổi trạng thái khi bạn không được phép thay đổi nó?
 
@@ -87,7 +89,27 @@ let olderLiz = {
 
 # Cách thức cập nhật trạng thái
 
-Những ví dụ sau được viết dựa trên tình huống ta đang trở lại trạng thái từ Redux reducer. Trong đó state là tham số được truyền vào trong hàm **reducer**, sau đó trở lại bản cập nhật của trạng thái:
+Những ví dụ sau được viết dựa trên tình huống ta đang trở lại trạng thái từ Redux reducer. Trong đó state là tham số được truyền vào trong hàm **reducer**, sau đó trở lại bản cập nhật của trạng thái.
+
+## Áp dụng với React setState
+Như đã nói, các ví dụ bên dưới được viết để sử dụng Redux, tuy nhiên với vài chỉnh sửa, ta có thể sử dụng với hoàn toàn React:
+
+```js
+const state = {
+  model: '2015 Lamborghini Aventador',
+  color: 'white',
+  price: '389990'
+}
+return {
+  ...state,     // copy trạng thái cũ
+  color: 'red'  // thêm phần trạng thái thay đổi
+}
+
+// Thuần React sẽ viết là:
+this.setState({
+  color: 'red'  // thêm phần trạng thái thay đổi
+})
+```
 
 ## Cập nhật trên đối tượng
 
