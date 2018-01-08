@@ -172,3 +172,16 @@ return [
   newItem
 ];
 ```
+
+## Thêm phần tử vào giữa mảng
+
+```js
+const array = [1, 2, 3, 5, 6];
+const newItem = 4;
+return [                
+  ...array.slice(0, 3), // 3 phần tử đầu tiên
+  newItem,
+  ...array.slice(3)     // 2 phần tử cuối cùng
+];
+```
+
