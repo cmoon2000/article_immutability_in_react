@@ -185,3 +185,18 @@ return [
 ];
 ```
 
+## Thay đổi phần tử ở giữa mảng
+
+Phần này cơ bản giống phần trên, khác nhau ở chỗ chỉ mục được đưa vào trong hàm slice.
+
+```js
+const array = [1, 2, "X", 5, 6];
+const newItem = 3;
+return [                
+  ...array.slice(0, 2), // 2 phần tử đầu tiên
+  newItem,
+  ...array.slice(3)     // 2 phần tử cuối cùng
+];
+```
+
+💡 Lời khuyên: ở những đoạn code này ta dễ bị nhầm, hãy viết kiểm thử cho chúng.
