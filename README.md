@@ -151,7 +151,7 @@ return {
 }
 ```
 
-## Thêm phần tử vào đầu của mảng
+## Thêm phần tử vào đầu mảng
 
 ```js
 const array = [1, 2, 3];
@@ -159,5 +159,16 @@ const newItem = 0;
 return [
   newItem,
   ...array
+];
+```
+
+## Thêm phần tử vào cuối mảng
+
+```js
+const array = [1, 2, 3];
+const newItem = 4;
+return [
+  ...array,
+  newItem
 ];
 ```
