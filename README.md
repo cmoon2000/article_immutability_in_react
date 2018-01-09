@@ -234,3 +234,5 @@ return [
 # Lời kết
 
 Qua những điều từ bài viết này, bạn hãy thử áp dụng vào các project của riêng mình. Thảm khảo thêm [Immutable Update Patterns ở trang Redux](https://redux.js.org/docs/recipes/reducers/ImmutableUpdatePatterns.html) để biết vài thủ thuật khác - Nó có nhắc đến phương thức của **mảng** là **map** và **filter**. Tuy nhiên, 'spread operator' với những khả năng tương tự 2 thằng này, đã đủ để sài rồi.
+
+test
