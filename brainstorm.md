@@ -34,4 +34,6 @@ result // ?
 
   + The only value in JavaScript that is not equal to itself. Just try NaN === NaN in your console
 
-  
+  + Pure Functions
+
+    We refer to functions that don’t affect anything in the outside scope as pure functions. As long as a function only takes primitive values as parameters and doesn’t use any variables in its surrounding scope, it is automatically pure, as it can’t affect anything in the outside scope. All variables created inside are garbage-collected as soon as the function returns.
