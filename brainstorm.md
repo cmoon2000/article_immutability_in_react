@@ -10,3 +10,9 @@ Vòng đời (theo thứ tự ⏲):
     + 2. shouldComponentUpdate
 
 🤔 immutable should be shallow or deep copy???
+
+Some keys:
+
+  + The basic principle in React rendering optimization is to let React know that it doesn’t need to render again because we know the resulting DOM will have no changes.
+
+  
