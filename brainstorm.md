@@ -31,3 +31,7 @@ object.x; // 2
 object.y; // 4
 result // ?
 ```
+
+  + The only value in JavaScript that is not equal to itself. Just try NaN === NaN in your console
+
+  
