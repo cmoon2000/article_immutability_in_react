@@ -37,3 +37,6 @@ result // ?
   + Pure Functions
 
     We refer to functions that don’t affect anything in the outside scope as pure functions. As long as a function only takes primitive values as parameters and doesn’t use any variables in its surrounding scope, it is automatically pure, as it can’t affect anything in the outside scope. All variables created inside are garbage-collected as soon as the function returns.
+
+  + Các bài viết có thể focus về mặt behavior, ko tuần theo chặt chẽ các định nghĩa, quy tắc.
+    VD: Trong JS, mảng thuộc kiểu object. Tuy nhiên, khi so sánh giữa một mảng vz một object dạng key-value thông thường, ta có thể coi đây là 2 dạng riêng rẽ.
